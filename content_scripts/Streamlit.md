@@ -1,21 +1,32 @@
 ### Streamlit 平台搭建学习路线
 
-#### 了解Streamlit
+#### 1. 前言
+对于目前的简易程序编写和平台搭建来讲，由于不需要完成工业化的产品，所以不需要特别高深的技术，只需要一些简单的操作就可以搭建简便好用的平台。Streamlit作为目前较为流行的Python平台搭建库，是值得我们学习的。而Cursor和GPT作为目前较为流行的AI编程工具，可以大大简化我们的开发流程。
 
-Streamlit 是一个用于构建和共享自定义 Web 应用程序的 Python 库。它允许用户使用 Python 代码快速创建和部署交互式 Web 应用程序。Streamlit 应用程序通常用于数据科学、机器学习、人工智能和科学研究等领域。
+而这个过程，在根本上，是构建了一条由AI辅助的完整的自学路径，甚至可以讲，通过这条路径可以掌握完整的知识获取方式，而不仅仅是一个编程技能。我们所需要的只是时间。Time is all you need.
 
-#### 安装Streamlit
+但是AI+编程并不是简单作Streamlit应用，而是以Streamlit为简单基础，在掌握最简单的Streamlit的搭建后，Web、小游戏、AI应用、数据分析、爬虫、数据可视化、数据挖掘、机器学习、深度学习、人工智能等都可以进行学习，并且再无任何阻碍，所以我们将Streamlit作为这一切的钥匙。
 
-要安装 Streamlit，可以使用 pip 包管理器。以下是安装 Streamlit 的命令：
+因此，我们Streamlit学习的核心
+- 0. 会使用GPT进行提问、进行代码编写和改错
+- 1. 理解Python基本语法，了解Python基本库，明确Github和Git的基本使用，了解Streamlit的基本使用。
+- 2. 会使用Cursor进行提问、进行代码编写和改错
 
-```bash
-pip install streamlit
-```
+#### 2. GPT的艺术 （需要科学上网）
+在这里我们统一利用GPT进行提问、编写和改错，以GPT-4omini为主要应用。
+ChatGPT网址: chatgpt.com
 
-#### 创建第一个Streamlit应用
+GPT的使用可以扩展，应该是以目的为导向的提问。假如我们从0开始不知道如何使用Github，那么我们就可以一步一步来问。
+prompt: 如何使用Github？
+GPT会回复你：安装 Git：如果还没有安装 Git，可以从 Git官网 下载并安装。安装后，可以通过终端（Windows 下可以使用 Git Bash）来使用 Git 命令。
 
-要创建第一个 Streamlit 应用程序，可以使用以下命令： 
+而你在安装git的时候遇到的任何问题，再次进行询问git，直到完成安装，然后继续去完成下一个步骤，然后继续完成这条路径，这样一步步走下去，直到完成所有步骤。直到你学会了如何使用GitHub。
 
-```bash
-streamlit run app.py
-```
+而在这个过程中，你不仅仅学会了如何使用GitHub，更学会了如何提问，如何获取知识，如何学习。这才是最重要的。
+
+#### 3. 基础知识
+这部分基础知识只作简短的介绍，详细的可以去询问GPT。因为这一步需要你在掌握前一步的基础上进行提问，因此这里只列举相应需要的知识。这也是对你自学能力的锻炼。
+0. 了解并且下载Vscode,学会如何利用vscode编写代码。
+1. 了解并掌握Github的用法，了解并且下载Git，学会git的基本用法。了解GitHub的Repository、Branch、Commit、Pull Request、Issue等基本概念。了解如何利用git进行版本控制、上传和克隆本地。
+2. 了解并且掌握基本的Streamlit是什么，了解Streamlit的组件和基本用法。编写最简单的Hello world的应用
+3. 
