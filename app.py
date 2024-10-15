@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(page_title="Streamlit团队平台", layout="wide")
+st.set_page_config(page_title="Streamlit团队平台", layout="wide", icon="🚀")
 
 def main():
 
