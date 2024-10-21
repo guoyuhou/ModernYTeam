@@ -27,6 +27,8 @@ GPT会回复你：安装 Git：如果还没有安装 Git，可以从 Git官网 �
 #### 3. 基础知识
 这部分基础知识只作简短的介绍，详细的可以去询问GPT。因为这一步需要你在掌握前一步的基础上进行提问，因此这里只列举相应需要的知识。这也是对你自学能力的锻炼。
 
+-1. 要学会下载python，并且安装pip，学会使用pip安装库。
+0. 要会科学上网，Cursor的注册不能用qq邮箱。
 1. 了解并且下载Vscode,学会如何利用vscode编写代码。
 2. 了解并掌握Github的用法，了解并且下载Git，学会git的基本用法。了解GitHub的Repository、Branch、Commit、Pull Request、Issue等基本概念。了解如何利用git进行版本控制、上传和克隆本地。
 3. 了解并且掌握基本的Streamlit是什么，了解Streamlit的组件和基本用法。编写最简单的Hello world的应用
