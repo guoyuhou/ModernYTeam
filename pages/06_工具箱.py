@@ -1,56 +1,41 @@
 import streamlit as st
-import subprocess
 import os
-import tempfile
+from pathlib import Path
 
-def convert_m3u8_to_mp4(m3u8_file):
-    with tempfile.NamedTemporaryFile(delete=False, suffix='.mp4') as tmp_file:
-        output_file = tmp_file.name
+# 设置页面标题
+st.title("🧰 工具箱")
+
+# 获取resource文件夹路径
+resource_path = Path("resource")
+
+# 确保resource文件夹存在
+if not resource_path.exists():
+    st.error("resource文件夹不存在!")
+else:
+    # 获取所有文件
+    files = list(resource_path.glob("*"))
     
-    command = [
-        'ffmpeg',
-        '-i', m3u8_file,
-        '-c', 'copy',
-        '-bsf:a', 'aac_adtstoasc',
-        output_file
-    ]
-    
-    try:
-        subprocess.run(command, check=True, capture_output=True)
-        return output_file
-    except subprocess.CalledProcessError:
-        return None
-
-st.title("M3U8 转 MP4 工具箱")
-
-uploaded_file = st.file_uploader("上传 M3U8 文件", type=['m3u8'])
-
-if uploaded_file is not None:
-    # 保存上传的文件
-    with tempfile.NamedTemporaryFile(delete=False, suffix='.m3u8') as tmp_file:
-        tmp_file.write(uploaded_file.getvalue())
-        m3u8_path = tmp_file.name
-
-    if st.button("转换为 MP4"):
-        with st.spinner("正在转换中..."):
-            output_file = convert_m3u8_to_mp4(m3u8_path)
+    if not files:
+        st.info("resource文件夹为空")
+    else:
+        st.write("### 可用资源:")
         
-        if output_file:
-            st.success("转换成功!")
+        # 创建文件列表
+        for file in files:
+            col1, col2 = st.columns([3, 1])
             
-            # 提供下载按钮  
-            with open(output_file, "rb") as file:
-                btn = st.download_button(
-                    label="下载 MP4 文件",
-                    data=file,
-                    file_name="converted_video.mp4",
-                    mime="video/mp4"
+            with col1:
+                st.write(f"📄 {file.name}")
+            
+            with col2:
+                # 读取文件内容
+                with open(file, "rb") as f:
+                    file_content = f.read()
+                # 创建下载按钮    
+                st.download_button(
+                    label="下载",
+                    data=file_content,
+                    file_name=file.name,
+                    mime="application/octet-stream"
                 )
-            
-            # 清理临时文件
-            os.remove(m3u8_path)
-            os.remove(output_file)
-        else:
-            st.error("转换失败,请检查您的 M3U8 文件是否有效。")
 
-st.write("注意:此工具需要在服务器上安装 FFmpeg。")
