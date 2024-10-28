@@ -13,7 +13,7 @@ if not resource_path.exists():
     st.error("resource文件夹不存在!")
 else:
     # 获取所有文件
-    files = list(resource_path.glob("*"))
+    files = list(resource_path.glob("*"))   
     
     if not files:
         st.info("resource文件夹为空")
