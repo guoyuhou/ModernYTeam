@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 # 设置页面标题
-st.title("🧰 工具箱")
+st.title("工具箱")
 
 # 获取resource文件夹路径
 resource_path = Path("resource")
