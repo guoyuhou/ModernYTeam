@@ -35,3 +35,14 @@ git push
 git pull 
 ```
 用于从远程仓库拉取代码到本地仓库。
+
+# Docker
+
+Docker ps: 查看所有容器
+
+Docker ps -a: 查看所有容器（包括已停止的）
+
+Docker rm -f $(docker ps -a -q): 删除所有容器
+
+netstat -tuln: 查看所有端口
+
